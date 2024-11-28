@@ -5,14 +5,15 @@
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
-    "@langchain/community": "latest",
-    "@langchain/groq": "latest",
-    "@langchain/core": "latest",
     "@huggingface/inference": "latest",
+    "@langchain/community": "latest",
+    "@langchain/core": "latest",
+    "@langchain/groq": "latest",
+    "public": "0.1.5",
     "react": "latest",
     "react-dom": "latest",
-    "tailwindcss": "latest",
-    "public": "0.1.5"
+    "react-scripts": "^5.0.1",
+    "tailwindcss": "latest"
   },
   "devDependencies": {
     "@types/react": "18.2.38",

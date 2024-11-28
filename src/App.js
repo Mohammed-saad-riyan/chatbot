@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { pdfContent } from "../public/pdfContent";
+import { pdfContent } from "./pdfContent.js";
 
 const HF_API_URL =
   "https://api-inference.huggingface.co/models/google/flan-t5-large";
@@ -36,7 +36,7 @@ function App() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        inputs: `Answer the following question based on the given context. If the answer is not in the context, say "I don't have enough information to answer that question."
+        inputs: `Answer the following question based on the given context. If the answer is not in the context, say "Sorry, I don't have enough information to answer that right now, but I'd be happy to help if you could provide a bit more detail!"
 
 Context: ${context}
 
@@ -67,7 +67,7 @@ Answer:`,
         );
       }
     } else {
-      setAnswer("I don't have enough information to answer that question.");
+      setAnswer("Sorry, I don't have enough information to answer that right now, but I'd be happy to help if you could provide a bit more detail!");
     }
 
     setLoading(false);
